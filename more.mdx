@@ -6,12 +6,37 @@ tags: ['next.js','nextjs','new']
 
 We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
 
-```ts
-const sum = (num1: number, num2: number): number => {
-    return num1 + num2
-}
+```app
 
-console.log(sum(4,8)) //12
+const Home = () => {
+  return (
+    <div className="min-h-screen mt-4">
+      <div className="md:flex justify-between items-center bg-muted p-4 rounded-xl border-l-2 border-l-violet-600/80 md:h-32">
+        <div className="md:w-1/3">
+          <Clock />
+        </div>
+        <div className="md:w-2/3 mt-2">
+          <FunFacts />
+        </div>
+      </div>
+      <div className="mt-10">
+        <div>
+          <div>
+            <h2 className="text-md font-bold">Technology</h2>
+            <p className="text-[13px] text-muted-foreground">
+              Current technology stack
+            </p>
+          </div>
+          <TechSlider />
+        </div>
+      </div>
+      {/* @ts-expect-error Server Component */}
+      <Posts />
+    </div>
+  );
+};
+
+export default Home;
 ```
 
 You can use Static Generation for many types of pages, including:
