@@ -1,0 +1,51 @@
+---
+title: 'Getting Started with React in 2023: Installation Guide and Example Code'
+date: '2023-04-28'
+tags: ["react",]
+---
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
+
+## How to Install React in 2023
+
+To get started with React in 2023, you'll need to follow these steps:
+
+1. **Install Node.js**: 
+   - Download and install Node.js from the official website: [https://nodejs.org](https://nodejs.org)
+
+2. **Create a new React project**:
+   - Open your terminal or command prompt.
+   - Run the following command to create a new React project using Create React App:
+     ```
+     npx create-react-app my-app
+     ```
+
+3. **Navigate to the project directory**:
+   - Change your current directory to the newly created project folder:
+     ```
+     cd my-app
+     ```
+
+4. **Start the development server**:
+   - Start the React development server by running the following command:
+     ```
+     npm start
+     ```
+
+5. **Verify the installation**:
+   - Open your web browser and visit `http://localhost:3000`. You should see the default React app running.
+
+Congratulations! You have successfully installed React in 2023 and created a new project. You can now start building your web applications using React.
+
+Here's a basic example of a React component:
+
+```jsx
+const App = () => {
+  return (
+    <div>
+      <h1>Welcome to My React App</h1>
+      <p>This is a sample component.</p>
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
